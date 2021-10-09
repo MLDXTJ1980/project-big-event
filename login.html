@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Big-Event-Login</title>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="./assets/css/login.css" rel="stylesheet" />
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://cdn.bootcss.com/bootstrap-validator/0.5.3/css/bootstrapValidator.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css" />
+
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+    <!-- jQuery文件 务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    <!-- baseAPI.js在jquery之后并且在其他js文件之前 -->
+    <script src="./assets/js/baseAPI.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件
+   -->
+
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+    <script src="./assets/js/login.js"></script>
+
+    <!-- # git checkout -b login 退出当前分支并创建login分支 -->
+    <!-- 开发中使用live server插件会比较方便 用http协议开发项目，右键open with live server 启用，关闭点击右下角Port图标 -->
+    <!--项目接口 http://api-breakingnews-web.itheima.net/api/reguser -->
+    <script type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="w">
+        <div class="loginAndRegBox">
+            <div class="innerBox">
+                <div class="title">Big Event Management System</div>
+                <div class="login-box">
+                    <form id="login-box">
+                        <div class="ipt form-group">
+                            <i class="bi bi-person"></i>
+                            <input type="text" class="form-control" name="username" placeholder="Please input username" />
+                        </div>
+                        <div class="ipt form-group">
+                            <i class="bi bi-lock"></i>
+                            <input type="password" class="form-control" name="password" placeholder="Please input password" />
+                        </div>
+
+                        <div class="ipt form-group">
+                            <button id="btn_submit_login" type="submit" class="btn btn-sm btn-primary">
+                  Login
+                </button>
+                        </div>
+
+                        <label id="link-reg"><a href="Javascript:;">Register</a></label>
+                    </form>
+                </div>
+
+                <div class="reg-box">
+                    <form id="reg-form">
+                        <div class="ipt form-group">
+                            <i class="bi bi-person"></i>
+                            <input type="text" class="form-control" name="username" placeholder="Please type username" />
+                        </div>
+                        <div class="ipt form-group">
+                            <i class="bi bi-lock"></i>
+                            <input type="password" class="form-control" name="password" placeholder="Please type password" />
+                        </div>
+                        <div class="ipt form-group">
+                            <i class="bi bi-lock"></i>
+                            <input type="password" class="form-control" name="confirmPassword" placeholder="Please confirm password" />
+                        </div>
+                        <div class="ipt form-group">
+                            <button id="btn_submit_reg" type="submit" class="btn btn-sm btn-primary">
+                  Register
+                </button>
+                        </div>
+                    </form>
+                    <label id="link-login"><a href="Javascript:;">Login</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

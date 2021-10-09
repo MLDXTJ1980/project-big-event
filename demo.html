@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Big-Event-Login</title>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="./assets/css/login.css" rel="stylesheet" />
+    <!-- <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /> -->
+    <!--   <link href="http://cdn.bootcss.com/bootstrap-validator/0.5.3/css/bootstrapValidator.min.css" rel="stylesheet" /> -->
+
+    <!-- jQuery文件 务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件
+   -->
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+    <script src="./assets/js/login.js"></script>
+
+    <!-- # git checkout -b login 退出当前分支并创建login分支 -->
+    <!-- 开发中使用live server插件会比较方便 用http协议开发项目，右键open with live server 启用，关闭点击右下角Port图标 -->
+    <script type="text/javascript"></script>
+</head>
+
+<body>
+    <script>
+        $(function() {
+            //页面加载完成
+            $("#myForm").bootstrapValidator({
+                message: "this is not a valid field", //设置提示信息
+                fields: {
+                    //设置要校验的字段集合
+                    username: {
+                        validators: {
+                            notEmpty: {
+                                message: "账户不能为空",
+                            },
+                            stringLength: {
+                                min: 6,
+                                max: 10,
+                                message: "账户长度为6-10",
+                            },
+                            regexp: {
+                                regexp: /^[a-z0-9]{6,10}$/,
+                                message: "账户格式不正确",
+                            },
+                        },
+                    },
+                    password: {
+                        validators: {
+                            notEmpty: {
+                                message: "密码不能为空",
+                            },
+                            stringLength: {
+                                min: 6,
+                                max: 10,
+                                message: "密码长度为6-10",
+                            },
+                            regexp: {
+                                regexp: /^[a-z0-9]{6,10}$/,
+                                message: "密码格式不正确",
+                            },
+                        },
+                    },
+                },
+            })
+        })
+    </script>
+    <div class="w">
+        <div class="loginAndRegBox">
+            <div class="innerBox">
+                <div class="title">Big Event Management System</div>
+                <div class="login-box">
+                    <div align="center">
+                        <form id="myForm" action="${pageContext.request.contextPath}/demo01" method="post">
+                            <div class="form-group">
+                                账户:<input type="text" name="username" /><br />
+                            </div>
+                            <div class="form-group">
+                                密码:<input type="text" name="password" /><br />
+                            </div>
+                            <div class="form-group">
+                                <button type="submit">提交</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
